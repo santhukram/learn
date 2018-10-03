@@ -7,19 +7,15 @@
 
 #include<avr\io.h>
 #include<util\delay.h>
-#define SW PIND & 0X02
-#define BUZ PORTD |= (1<<4)
+#include "blink.h"
 int main()
 {
-	DDRD &= ~(1<<2);
 	DDRA = 0XFF;
 	PORTA = 0XFF;
 	while(1)
 	{
 
-		PORTA = ~ PORTA;
-		_delay_ms(1000);
-
+	blink();
 
 	}
 
