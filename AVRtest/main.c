@@ -8,6 +8,7 @@
 #include<avr\io.h>
 #include<util\delay.h>
 #define SW PIND & 0X02
+#define BUZ PORTD |= (1<<4)
 int main()
 {
 	DDRD &= ~(1<<2);
