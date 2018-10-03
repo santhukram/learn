@@ -16,11 +16,10 @@ int main()
 	PORTA = 0XFF;
 	while(1)
 	{
-		if (!SW)
-		{
+
 		PORTA = ~ PORTA;
 		_delay_ms(1000);
-		}
+
 
 	}
 
